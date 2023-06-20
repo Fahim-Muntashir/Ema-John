@@ -24,7 +24,7 @@ const Shop = () => {
       if (addedProduct) {
         //step 3: add quantity
         const quantity = storedCart[id];
-        addedProduct.quantiy = quantity;
+        addedProduct.quantity = quantity;
         savedCart.push(addedProduct);
       }
     }
@@ -32,7 +32,20 @@ const Shop = () => {
   }, [products]);
 
   const handleAddToCart = (product) => {
-    const newCart = [...cart, product];
+    let newCart = [];
+
+    // if product does not exists in the ,then set quantity =1
+    // if exists update quantity by 1
+    const exists = cart.find((pd) => pd.id === product.id);
+    if (!exists) {
+      product.quantity = 1;
+      newCart = [...cart, product];
+    } else {
+      exists.quantity = exists.quantity + 1;
+      const remaining = cart.filter((pd) => pd.id !== product.id);
+      newCart = [...remaining, exists];
+    }
+
     setCart(newCart);
     addToDb(product.id);
   };
