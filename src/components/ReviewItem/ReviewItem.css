@@ -4,6 +4,7 @@
     border-radius: 8px;
     margin-bottom: 25px;
     display: flex;
+    align-items: center;
 }
 
 .review-item .product-title {
@@ -36,4 +37,15 @@
     height: 55px;
     width: 55px;
     border-radius: 50%;
+    border: none;
+    background-color: rgba(212, 118, 10, 0.522);
+    color: rgba(189, 23, 23, 0.807);
+    font-size: 28px;
+    margin: 30px;
+}
+
+.btn-delete:hover {
+    cursor: pointer;
+    background-color: rgba(153, 85, 7, 0.501);
+    color: rgba(2, 0, 0, 0.874);
 }
