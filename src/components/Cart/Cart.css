@@ -8,3 +8,26 @@
 .cart p {
     font-size: 17px;
 }
+
+.btn-clear {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px auto;
+    border: none;
+    background-color: rgba(221, 221, 221, 0.651);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(237, 31, 31);
+    transition: 0.5s;
+}
+
+.btn-clear:hover {
+    background-color: rgba(221, 221, 221, 0.444);
+    color: rgba(231, 37, 37, 0.667);
+    font-weight: bold;
+
+}

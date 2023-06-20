@@ -10,3 +10,29 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
 }
+
+.cart-container a {
+    text-decoration: none;
+}
+
+.btn-procced {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px auto;
+    border: none;
+    background-color: rgba(10, 216, 13, 0.651);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 550;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.btn-procced:hover {
+    font-weight: 600;
+    background-color: rgb(36, 78, 64);
+}
